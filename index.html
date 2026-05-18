@@ -180,7 +180,14 @@
   const clickedBefore = localStorage.getItem('wa_clicked');
 
   let mensajeUI = "";
-  let mensajeWA = "";
+  let mensajeWA = `Hola! Queremos avanzar con Escaparate AD.
+
+Nombre:
+Negocio:
+
+Situación:
+Objetivo:
+`S;
 
   // -------- MENSAJE POR PÁGINA --------
   if (pagina === "planes") {
@@ -242,8 +249,8 @@ if (!isWorkingHours || esFeriado) {
   }
 
   else if (diaNum === 6 || diaNum === 7) {
-    mensajeUI = "Estamos fuera de horario. Dejanos tu mensaje y el lunes te respondemos primero 👍";
-    mensajeWA = "Hola! Les dejo mi consulta para retomar el lunes.";
+    mensajeUI = "Estamos fuera de horario. Dejanos tu mensaje y el Lunes te respondemos primero 👍";
+    mensajeWA = "Hola! Les dejo mi consulta para retomar el Lunes.";
   }
 
   else {
