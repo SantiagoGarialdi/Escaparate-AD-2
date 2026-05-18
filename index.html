@@ -195,7 +195,7 @@ Objetivo:
     mensajeWA = "Hola! Estoy viendo los planes y quiero asesoramiento.";
   } 
   else if (pagina === "servicios") {
-    mensajeUI = "Te explicamos cuál plan te conviene según tu negocio.";
+    mensajeUI = "Te explicamos cuál plan te conviene según tu negocio y situación.";
     mensajeWA = "Hola! Vi la página de servicios y quiero más info.";
   } 
   else {
@@ -263,7 +263,7 @@ if (!isWorkingHours || esFeriado) {
   mensajeUI += "<br><br><span style='font-size:14px; opacity:0.75;'>✍️ Completá tus datos y te ayudamos más rápido</span>";
  if (msg) msg.innerHTML = mensajeUI;
   // -------- LINK DINÁMICO --------
-  const numero = "542604234565";
+  const numero = "5492604234565";
   const urlFinal = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensajeWA);
   link.href = urlFinal;
 
