@@ -188,7 +188,9 @@ Negocio:
 Situación:
 Objetivo:
 `S;
+mensajeWA += `
 
+Ref: ${pagina}`;
   // -------- MENSAJE POR PÁGINA --------
   if (pagina === "planes") {
     mensajeUI = "¿Querés elegir el mejor plan? 🚀<br>Te asesoramos en minutos.";
@@ -268,9 +270,21 @@ if (!isWorkingHours || esFeriado) {
   link.href = urlFinal;
 
   // -------- TRACK INTENCIÓN --------
-  link.addEventListener('click', () => {
-    localStorage.setItem('wa_clicked', 'true');
-  });
+link.addEventListener('click', () => {
+
+  localStorage.setItem('wa_clicked', 'true');
+
+  const data = {
+    pagina: pagina,
+    hora: hour,
+    dia: diaNum,
+    recurrente: !!clickedBefore,
+    timestamp: new Date().toISOString()
+  };
+
+  console.log("WA CLICK:", data);
+
+});
 
   // -------- VISIBILIDAD --------
   wa.classList.add('show');
